@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Node--: "
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/purple_200"/>
+
+        <TextView
+            android:id="@+id/tv_node"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Node!-"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/purple_200"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_1"
+        android:weightSum="2"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Push--: "
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:textColor="@color/purple_200"/>
+
+        <TextView
+            android:id="@+id/tv_single_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Node!-"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/purple_200"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_2"
+        android:weightSum="2"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fluent Interface_Push--: "
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textColor="@color/purple_200"/>
+
+        <TextView
+            android:id="@+id/tv_fluent_push"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Node!-"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/purple_200"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_3"
+        android:weightSum="2"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Append--: "
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textColor="@color/purple_200"/>
+
+        <TextView
+            android:id="@+id/tv_append"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Node!-"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@color/purple_200"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_4"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Particular Index--: "
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textColor="@color/purple_200"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_4"
+            android:weightSum="2"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Before Inserting--: "
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@color/purple_200"/>
+
+            <TextView
+                android:id="@+id/tv_bef_insert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Node!-"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/purple_200"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_4"
+            android:weightSum="2"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="After Inserting--: "
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@color/purple_200"/>
+
+            <TextView
+                android:id="@+id/tv_aft_insert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Node!-"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/purple_200"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_5"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pop--: "
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:textColor="@color/purple_200"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_5"
+            android:weightSum="2"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Before Popping List--: "
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@color/purple_200"/>
+
+            <TextView
+                android:id="@+id/tv_bef_pop_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Node!-"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/purple_200"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_5"
+            android:weightSum="2"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="After Popping List--: "
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@color/purple_200"/>
+
+            <TextView
+                android:id="@+id/tv_aft_pop_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Node!-"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/purple_200"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_5"
+            android:weightSum="2"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pop Value--: "
+                android:textSize="14sp"
+                android:layout_weight="1"
+                android:textColor="@color/purple_200"/>
+
+            <TextView
+                android:id="@+id/tv_pop_value"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Node!-"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:textColor="@color/purple_200"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+</layout>
