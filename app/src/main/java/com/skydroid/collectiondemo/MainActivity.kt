@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.databinding.DataBindingUtil
 import com.skydroid.collectiondemo.Tree.TreeNode
+import com.skydroid.collectiondemo.binary_search_tree.BinarySearchTree
+import com.skydroid.collectiondemo.binary_tree.BinaryNode
 import com.skydroid.collectiondemo.databinding.ActivityMainBinding
 import com.skydroid.collectiondemo.linkedlist.LinkedList
 import com.skydroid.collectiondemo.linkedlist.Node
@@ -51,6 +53,49 @@ class MainActivity : AppCompatActivity() {
         //Tree
         tree()
 
+        //binary_tree
+        binaryTree()
+
+        //binary search tree
+        binarySearchTree()
+
+    }
+
+    private fun binarySearchTree() {
+        val bst = BinarySearchTree<Int>()
+        (0..4).forEach {
+            bst.insert(it)
+        }
+        println("Binary Search Tree ==")
+        println(bst)
+    }
+
+    private fun binaryTree() {
+        val zero = BinaryNode(0)
+        val one = BinaryNode(1)
+        val five = BinaryNode(5)
+        val seven = BinaryNode(7)
+        val eight = BinaryNode(8)
+        val nine = BinaryNode(9)
+        seven.leftChild = one
+        one.leftChild = zero
+        one.rightChild = five
+        seven.rightChild = nine
+        nine.leftChild = eight
+        val tree = seven
+        println(tree)
+
+        //inOrderTraversal
+        println("inOrderTraversal==")
+        tree.traverseInOrder { println(it) }
+
+        println("Pre-order traversal==")
+        //Pre-order traversal
+        tree.traversePreOrder { println(it) }
+
+        println("Post-order traversal==")
+        //Post-order traversal
+        tree.traversePostOrder { println(it) }
 
     }
 
@@ -61,6 +106,41 @@ class MainActivity : AppCompatActivity() {
             add(hot)
             add(cold)
         }
+
+
+        //Depth-first traversal
+        val tree = makeBeverageTree()
+        tree.forEachDepthFirst {
+            println("Tree:--  "+it.value) }
+    }
+
+    fun makeBeverageTree(): TreeNode<String> {
+        val tree = TreeNode("Beverages")
+        val hot = TreeNode("hot")
+        val cold = TreeNode("cold")
+        val tea = TreeNode("tea")
+        val coffee = TreeNode("coffee")
+        val chocolate = TreeNode("cocoa")
+        val blackTea = TreeNode("black")
+        val greenTea = TreeNode("green")
+        val chaiTea = TreeNode("chai")
+        val soda = TreeNode("soda")
+        val milk = TreeNode("milk")
+        val gingerAle = TreeNode("ginger ale")
+        val bitterLemon = TreeNode("bitter lemon")
+        tree.add(hot)
+        tree.add(cold)
+        hot.add(tea)
+        hot.add(coffee)
+        hot.add(chocolate)
+        cold.add(soda)
+        cold.add(milk)
+        tea.add(blackTea)
+        tea.add(greenTea)
+        tea.add(chaiTea)
+        soda.add(gingerAle)
+        soda.add(bitterLemon)
+        return tree
     }
 
     private fun queue() {
@@ -179,4 +259,5 @@ class MainActivity : AppCompatActivity() {
 
         //Finish node
     }
+
 }
