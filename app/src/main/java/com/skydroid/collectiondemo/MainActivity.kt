@@ -11,6 +11,12 @@ import com.skydroid.collectiondemo.databinding.ActivityMainBinding
 import com.skydroid.collectiondemo.linkedlist.LinkedList
 import com.skydroid.collectiondemo.linkedlist.Node
 import com.skydroid.collectiondemo.queue.ArrayListQueue
+import com.skydroid.collectiondemo.sorting.bubbleSort.bubbleSort
+import com.skydroid.collectiondemo.sorting.insertionSort.insertionSort
+import com.skydroid.collectiondemo.sorting.mergeSort.mergeSort
+import com.skydroid.collectiondemo.sorting.quickSort.quicksort
+import com.skydroid.collectiondemo.sorting.radixSort.radixSort
+import com.skydroid.collectiondemo.sorting.selectionSort.selectionSort
 
 /**
  * Created by Akash Singh on 10-01-2022.
@@ -59,6 +65,81 @@ class MainActivity : AppCompatActivity() {
         //binary search tree
         binarySearchTree()
 
+        //bubble sort
+        bubbleSort()
+
+        //selection sort
+        selectionSort()
+
+        //insertion sort
+        insertionSort()
+
+        //merge sort
+        mergeSort()
+
+        //radix sort
+        radixSort()
+
+        //quick sort
+        quickSort()
+
+
+
+    }
+
+    private fun quickSort() {
+        println("Quick Sort == :")
+
+        val numbers = listOf<Int>(2, 4, 7, 3, 6, 9, 5, 1, 0)
+        println(numbers)
+        println("Ordered list:")
+        val ordered =  quicksort(numbers)
+        println(ordered)
+    }
+
+    private fun radixSort() {
+        println("Radix Sort ==")
+
+        val list = arrayListOf(88, 410, 1772, 20)
+        println("Original: $list")
+        list.radixSort()
+        println("Radix sorted: $list")
+
+    }
+
+    private fun mergeSort() {
+        println("Merge Sort ==")
+
+        val list = listOf(7, 2, 6, 3, 9)
+        println("Original: $list")
+        val result = list.mergeSort()
+        println("Merge sorted: $result")
+    }
+
+    private fun insertionSort() {
+        println("Insertion Sort ==")
+        val list = arrayListOf(9, 4, 10, 3)
+        println("Original: $list")
+        list.insertionSort(true)
+        println("Bubble sorted: $list")
+    }
+
+    private fun selectionSort() {
+
+        println("Selection Sort == ")
+        val list = arrayListOf(9, 4, 10, 3)
+        println("Original: $list")
+        list.selectionSort(true)
+        println("Bubble sorted: $list")
+    }
+
+    private fun bubbleSort() {
+        println("Bubble Sort == ")
+
+        val list = arrayListOf(9, 4, 10, 3)
+        println("Original: $list")
+        list.bubbleSort(true)
+        println("Bubble sorted: $list")
     }
 
     private fun binarySearchTree() {
